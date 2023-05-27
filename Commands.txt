@@ -43,8 +43,6 @@ gcloud container clusters get-credentials hello-cluster  --region=us-west1
 #Create the Deployment on the cluster
 kubectl apply -f createDeployment.yaml
 
-#Get authentication credentials for the cluster
-gcloud container clusters get-credentials hello-cluster --region us-west1
 
 #Create a service by exposing the Deployment
 kubectl expose deployment mydeployment --type LoadBalancer --port 80 --target-port 8080
